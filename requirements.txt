@@ -1,1 +1,1 @@
-pip install django
+django == 5.1.2
