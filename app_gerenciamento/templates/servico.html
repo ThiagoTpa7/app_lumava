@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th scope="row">Número da ordem</th>
+            <th scope="row">Operação</th>
+            <th scope="row">PC</th>
+            <th scope="row">Nome EC</th>
+            <th scope="row">UO</th>
+            <th scope="row">Data</th>
+            <th scope="row"></th>
+        </tr>
+    </thead>
+        <tbody>
+            {% if servicos %}
+            <tr>
+                {% for servico in servicos %}
+
+                <td scope="row">{{ servico.os }}</td>
+                <td class="scope">{{ servico.n_operacao }}</td>
+                <td class="scope">{{ servico.p_c }}</td>
+                <td class="scope">{{ servico.nome_pc }}</td>
+                <td class="scope">{{ servico.uo }}</td>
+                <td class="scope">{{ servico.data }}</td>
+                {% if request.user.is_authenticated %}
+                <td class="scope">
+                    <a href="{% url 'info_os' servico.slug %}">Ver mais</a>
+                </td>
+                {% else %}
+                <td></td>
+                {% endif %}
+                </tr>
+                {% endfor %}
+
+            {% else %}
+            <tr>
+                <td colspan="12">Nenhum Serviço encontrado.</td>
+            </tr>
+            {% endif %}
+        </tbody>
+    
+  </table>
+{% endblock %}

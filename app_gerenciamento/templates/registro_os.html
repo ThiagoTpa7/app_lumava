@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container"  id="form-os">
+
+    <form class="p-3 border border-dark rounded bg-dark text-white" method="POST" action="{% url 'registrar_os' %}">
+    
+    {% csrf_token %}
+    
+    <div class="mb-3">
+        <label for="os" class="form-label">O.S</label>
+        <input type="text" class="form-control " id="os" name="os" aria-describedby="os">
+    </div>
+
+    <div class="mb-3">
+      <label for="p_a" class="form-label">PA</label>
+      <input type="text" class="form-control " id="p_a" name="p_a" aria-describedby="pa">
+    </div>
+
+    <div class="mb-3">
+      <label for="p_c" class="form-label">PC</label>
+      <input type="text" class="form-control" id="p_c" name="p_c">
+    </div>
+
+    <div class="mb-3">
+        <label for="operacao" class="form-label">Operação</label>
+        <input type="text" class="form-control" id="operacao" name="operacao">
+    </div>
+
+    <div class="mb-3">
+        <label for="n_operacao" class="form-label">N° Operação </label>
+        <input type="text" class="form-control" id="n_operacao" name="n_operacao">
+    </div>
+
+    <div class="mb-3">
+        <label for="nome_pc" class="form-label">Nome do PC</label>
+        <input type="text" class="form-control" id="nome_pc" name="nome_pc">
+    </div>
+
+    <div class="mb-3">
+        <label for="endereco" class="form-label">Endereço</label>
+        <input type="text" class="form-control" id="endereco" name="endereco">
+    </div>
+
+    <div class="mb-3">
+        <label for="uo" class="form-label">UO</label>
+        <input type="text" class="form-control" id="uo" name="uo">
+    </div>
+
+    <div class="mb-3">
+        <label for="fixacao" class="form-label">Fixação</label>
+        <input type="text" class="form-control" id="fixacao" name="fixacao">
+    </div>
+
+    <div class="mb-3">
+        <label for="data" class="form-label">Data</label>
+        <input type="date" class="form-control" id="data" name="data">
+    </div>
+
+    <div class="mb-3">
+        <label for="hora" class="form-label">Horario</label>
+        <input type="time" class="form-control" id="hora" name="hora">
+    </div>
+    
+    <div class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-primary" id="btn-form-os">Registrar</button>
+    </div>
+    
+    </form>    
+</div>
+
+
+{% endblock %}

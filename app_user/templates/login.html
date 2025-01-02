@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="container">
+    <form action="" method="POST" class="w-25">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="" class="form-label">Login</label>
+            <input type="text" class="form-control"  name="username" id="username">
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Senha</label>
+            <input type="password" class="form-control" name="password" id="password">
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-success">Entrar</button>
+            <a href="{% url 'home' %}">
+                <button class="btn btn-primary">Voltar</button>
+            </a>
+            
+        </div>
+        
+    </form>
+</div>
+
+{% endblock %}

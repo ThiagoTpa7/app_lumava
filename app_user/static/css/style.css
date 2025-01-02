@@ -1,0 +1,52 @@
+
+.nav {
+    padding: 10px;
+    display: flex;
+}
+.nav-item {
+    position: relative;
+    margin-right: 20px;
+    list-style: none;
+}
+.nav-item a {
+    color: #000000;
+    text-decoration: none;
+    display: block;
+}
+ul{
+    list-style-type:none;
+}
+
+/* Submenu oculto inicialmente */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+.submenu a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    background-color: darkgray;
+    border-radius: 15%;
+}
+.submenu a:hover {
+    background-color: rgb(51, 74, 148);
+    border-radius: 15%;
+    color: white;
+}
+
+/* Barra de rolagem do cadastro de OS*/
+
+#form-os{
+    max-width: 500px;
+    max-height: 400px;
+    overflow: auto;
+}
+#btn-form-os{
+    display: flex;
+    justify-content: center;
+}
